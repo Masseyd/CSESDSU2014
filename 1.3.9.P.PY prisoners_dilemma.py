@@ -99,7 +99,7 @@ def play_iterative_rounds(player1, player2):
 def get_action(player, history, opponent_history, score, opponent_score, getting_team_name=False):
     '''Gets the strategy for the player, given their own history and that of
     their opponent, as well as the current scores within this pairing.
-    The parameters history and opponenet history are strings with one letter
+    The parameters history and opiponenet history are strings with one letter
     per round that has been played so far: either an 'c' for collude or a 'b' for 
     betray. The function should return one character, 'c' or 'b'. 
     The history strings have the first round between these two players 
