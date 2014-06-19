@@ -380,13 +380,21 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
         if getting_team_name:
             return 'Roger & Greg'
         else:
-            pct_coop = 0.7
-            if random.uniform(0,1) < pct_coop:
+            # use history, opponent_history, score, opponent_score
+            # to compute your strategy
+            # pct_coop = 0.7
+            if len(opponent_history) == 0:
                 return 'c'
             else:
-                return 'b'
-
-
+                if opponent_history[-1] == 'b':
+                    return 'b'
+                else:
+                    return 'c'
+                #if random.uniform(0,1) < pct_coop:
+                #    return 'c'
+                #else:
+                #    return 'b'
+                            
 
 
 
